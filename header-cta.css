@@ -1,0 +1,46 @@
+.nav-links > a:not(.nav-cta) {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 11px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  font-family: Manrope, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  transition: color 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.nav-links > a:not(.nav-cta):hover {
+  color: #fff;
+  border-color: rgba(169, 154, 255, 0.35);
+  background: linear-gradient(110deg, rgba(128, 85, 246, 0.2), rgba(32, 201, 243, 0.12));
+  box-shadow: 0 6px 18px rgba(105, 88, 243, 0.14);
+  transform: translateY(-1px);
+}
+
+.nav-links > a:not(.nav-cta):focus-visible {
+  outline: 2px solid #d5f7ff;
+  outline-offset: 3px;
+}
+
+.nav-cta {
+  border-color: rgba(192, 174, 255, 0.65);
+  background: linear-gradient(110deg, #8055f6 0%, #6958f3 48%, #20c9f3 100%);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 8px 22px rgba(105, 88, 243, 0.3);
+}
+
+.nav-cta span {
+  color: #fff;
+}
+
+.nav-cta:hover {
+  border-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 12px 30px rgba(74, 173, 255, 0.34);
+}
+
+.nav-cta:focus-visible {
+  outline: 2px solid #d5f7ff;
+  outline-offset: 3px;
+}

@@ -1,0 +1,92 @@
+.approach .step {
+  --step-accent: #a99aff;
+  isolation: isolate;
+  border-color: rgba(169, 154, 255, 0.18);
+  background: linear-gradient(105deg, rgba(34, 39, 67, 0.82), rgba(15, 21, 34, 0.92) 72%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 12px 28px rgba(0, 0, 0, 0.12);
+  transition: transform 0.28s ease, border-color 0.28s ease, background 0.28s ease, box-shadow 0.28s ease;
+}
+
+.approach .step:nth-child(2) {
+  --step-accent: #49d8ff;
+}
+
+.approach .step:nth-child(3) {
+  --step-accent: #7fe4cb;
+}
+
+.approach .step:nth-child(4) {
+  --step-accent: #f5d18d;
+}
+
+.approach .step::before {
+  background: radial-gradient(circle at var(--pointer-x) var(--pointer-y), color-mix(in srgb, var(--step-accent) 28%, transparent), transparent 34%);
+}
+
+.approach .step::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+  bottom: 12px;
+  left: 0;
+  width: 3px;
+  border-radius: 0 4px 4px 0;
+  background: var(--step-accent);
+  box-shadow: 0 0 14px color-mix(in srgb, var(--step-accent) 55%, transparent);
+  opacity: 0.72;
+  transition: opacity 0.28s ease, box-shadow 0.28s ease;
+}
+
+.approach .step > span {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  min-height: 28px;
+  border: 1px solid color-mix(in srgb, var(--step-accent) 48%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--step-accent) 12%, transparent);
+  color: var(--step-accent);
+  font-weight: 700;
+}
+
+.approach .step > b {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid color-mix(in srgb, var(--step-accent) 35%, transparent);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--step-accent) 10%, transparent);
+  color: var(--step-accent);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.approach .step:hover {
+  transform: translateX(6px) translateY(-3px);
+  border-color: color-mix(in srgb, var(--step-accent) 55%, transparent);
+  background: linear-gradient(105deg, color-mix(in srgb, var(--step-accent) 15%, #151b2a), rgba(15, 21, 34, 0.94) 72%);
+  box-shadow: 0 16px 34px color-mix(in srgb, var(--step-accent) 14%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.approach .step:hover::before {
+  opacity: 1;
+}
+
+.approach .step:hover::after {
+  opacity: 1;
+  box-shadow: 0 0 20px color-mix(in srgb, var(--step-accent) 72%, transparent);
+}
+
+.approach .step:hover > b {
+  transform: translate(2px, -2px);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--step-accent) 28%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .approach .step,
+  .approach .step::after,
+  .approach .step > b {
+    transition: none;
+  }
+}

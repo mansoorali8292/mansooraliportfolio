@@ -1,0 +1,18 @@
+.portrait-card {
+  animation: portrait-float 6s ease-in-out infinite;
+}
+
+@keyframes portrait-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portrait-card {
+    animation: none;
+  }
+}
